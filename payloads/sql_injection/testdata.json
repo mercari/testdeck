@@ -1,0 +1,13 @@
+{
+  "string": [
+    {
+      "files": [
+        "../payloads/sql_injection/Generic_TimeBased.txt"
+      ],
+      "type": "sql injection",
+      "expected": {
+        "timeDelay": 1
+      }
+    }
+  ]
+}

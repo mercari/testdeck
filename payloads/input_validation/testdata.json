@@ -1,0 +1,46 @@
+{
+  "string": [
+    {
+      "files": [
+        "../payloads/input_validation/strings.txt"
+      ],
+      "type": "input validation",
+      "expected": {
+        "errorMessage": ""
+      }
+    }
+  ],
+  "int": [
+    {
+      "files": [
+        "../payloads/input_validation/integers.txt"
+      ],
+      "type": "input validation",
+      "expected": {
+        "errorMessage": ""
+      }
+    }
+  ],
+  "float": [
+    {
+      "files": [
+        "../payloads/input_validation/floats.txt"
+      ],
+      "type": "input validation",
+      "expected": {
+        "errorMessage": ""
+      }
+    }
+  ],
+  "bool": [
+    {
+      "files": [
+        "../payloads/input_validation/booleans.txt"
+      ],
+      "type": "input validation",
+      "expected": {
+        "errorMessage": ""
+      }
+    }
+  ]
+}

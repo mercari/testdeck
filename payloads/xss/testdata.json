@@ -1,0 +1,15 @@
+{
+  "string": [
+    {
+      "files": [
+        "../payloads/xss/IntrudersXSS.txt",
+        "../payloads/xss/XSS_Polyglots.txt",
+        "../payloads/xss/XSSDetection.txt"
+      ],
+      "type": "reflected xss",
+      "expected": {
+        "errorMessage": ""
+      }
+    }
+  ]
+}

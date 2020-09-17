@@ -1,0 +1,33 @@
+# Explanation of Files
+
+- constants
+    - constants.go: Contains constants and data struct definitions
+- deferrer
+    - deferrer.go: Contains the defer stack that forces lifecycle steps to execute in order
+- demo
+    - demo_test.go: Style guide for writing Testdeck test cases
+    - err_handling_test.go: Examples for how to handle errors in test cases
+- fname
+    - fname.go: A helper method for getting the name of the current function
+- fuzzer
+    - fuzzer.go: Contains the fuzzing feature
+- grpcutils
+    - grpcutils.go: Utility methods for use when testing grpc methods
+- httputils
+    - httputils.go: Utility methods for use when testing http methods
+    - multipart_form.go: Utility methods for converting structs to multipart forms
+- intruder
+    - intruder.go: Contains the intruder feature
+    - testdata_helper.go: Helper methods for formatting test data for use with the intruder
+- runner
+    - example: Contains sample tests
+    - deps.go: Copied from [go/testing/internal/testdeps/deps.go](https://github.com/golang/go/blob/master/src/testing/internal/testdeps/deps.go)
+    - log.go: Copied from [go/log.go](https://github.com/golang/go/blob/master/src/log/log.go)
+    - runner.go: Contains a customized version of [go/testing](https://github.com/golang/go/blob/master/src/testing/testing.go)'s Runner
+- payloads: Contains test data files for injecting malicious payloads (payload text files are taken from [swisskyrepo/PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings))
+- service
+    - config: Configuration for the rpc service created for testing
+    - controller: Contains methods for controlling the test run (test execution, logging, etc.)
+    - db: Contains sample code for saving test results to a DB (this is only to serve as an example, your DB schema may be different)
+    - integration.go: Stands up a GRPC microservice and starts running tests
+- harness.go: A wrapper around [go/testing](https://github.com/golang/go/blob/master/src/testing/testing.go)'s testing.T
