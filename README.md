@@ -16,7 +16,7 @@ Please see the [docs](https://github.com/mercari/testdeck/blob/master/docs/intro
 
 As with all test automation frameworks, you will most likely need to do some customization and fine-tuning to tailor this tool for your organization. It is recommended that you clone this repository and build on top of it to suit your needs.
 
-To learn how to build your own test automation system using Testdeck, please see the [setup guide](https://github.com/mercari/testdeck/docs/setup.md) and the blog article.
+To learn how to build your own test automation system using Testdeck, please see the [setup guide](https://github.com/mercari/testdeck/blob/master/docs/setup.md) and the blog article.
 
 # Contribution
 
