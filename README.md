@@ -2,7 +2,7 @@
 
 Testdeck is a framework for integration, end-to-end (E2E), and security testing of gRPC microservices written in Golang.
 
-Please see the [docs](https://github.com/mercari/testdeck/docs) folder for documentation and tutorials.
+Please see the [docs](https://github.com/mercari/testdeck/blob/master/docs/introduction.md) folder for documentation and tutorials.
 
 # Features
 
