@@ -36,6 +36,7 @@ runner when there is more time.
 // RealStdout will point to the real stdout
 var RealStdout *os.File
 var printStdout = true
+var printOutputToEventLog = false
 var instance Runner
 var once sync.Once
 
@@ -69,6 +70,7 @@ type Runner interface {
 	ClearStatistics()
 	Match(pattern string) error
 	PrintToStdout(yes bool)
+	PrintOutputToEventLog(yes bool)
 	SetEventLogger(e EventLogger)
 	LogEvent(message string)
 	ReportStatistics()
@@ -138,11 +140,15 @@ func (r *runner) Run() {
 	outChannel := make(chan string)
 	go func() {
 		var buf bytes.Buffer
-		if printStdout {
+		if printStdout || printOutputToEventLog {
 			var writers []io.Writer
 
 			if printStdout {
 				writers = append(writers, RealStdout)
+			}
+
+			if printOutputToEventLog {
+				writers = append(writers, NewEventWriter(r))
 			}
 
 			teeStdout := io.TeeReader(rp, io.MultiWriter(writers...))
@@ -218,6 +224,10 @@ func (r *runner) Output() string {
 
 func (r *runner) PrintToStdout(yes bool) {
 	printStdout = yes
+}
+
+func (r *runner) PrintOutputToEventLog(yes bool) {
+	printOutputToEventLog = yes
 }
 
 func (r *runner) SetEventLogger(e EventLogger) {

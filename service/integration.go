@@ -62,6 +62,8 @@ func NewService(m *testing.M) Service {
 
 // Start the testing service
 func (s *ServiceImpl) Start(opt ...ServiceOptions) int {
+	s.controller.Runner().PrintOutputToEventLog(Env.PrintOutputToEventLog)
+	
 	// Only start tests if run as a test job
 	switch runAs := config.RunAs(Env); runAs {
 	case config.RunAsJob:
