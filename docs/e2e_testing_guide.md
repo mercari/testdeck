@@ -7,13 +7,13 @@ Testdeck test cases are divided into four "lifecycle" stages. You do not have to
 - Arrange: This is the setup stage. If you need to create test data, login to a test account, etc. you should put that code here.
 - Act: This is the actual testing stage. Here, you should call the endpoint that you want to test.
 - Assert: This is the verification stage. Here, you should add assertion statements to verify that the response returned in the Act stage matches what you expect.
-- After: This is the cleanup stage. If you to do anything after the test (e.g. restore data back to original state, delete data, etc.) you should put that code here.
+- After: This is the cleanup stage. If you want to do anything after the test (e.g. restore data back to original state, delete data, etc.) you should put that code here.
 
 ![Testdeck Lifecycle Stages](images/lifecycle.png?raw=true)
 
 ## Debugging Failed Test Cases
 
-Please see the [Reporting and Metrics](../../docs/reporting.md) doc for more tips on how to debug.
+Please see the [Reporting and Metrics](https://github.com/mercari/testdeck/blob/master/docs/reporting_metrics.md) doc for more tips on how to debug.
 
 ## Types of Test Cases
 
